@@ -1,0 +1,15 @@
+FROM nginx:1.24.0
+
+# Instalamos cron y quitamos iputils-ping iproute2 porque ya no hará falta
+RUN apt-get update
+RUN apt-get install -y cron
+
+# Le pasamos con COPY el script que acabamos de crear y le damos permisos
+COPY script_escalar_servicios.sh /usr/local/bin/script_escalar_servicios.sh
+RUN chmod +x /usr/local/bin/script_escalar_servicios.sh
+
+# Le pasamos con COPY el crontab con los 2 minutos especificados
+COPY crontabfile /etc/cron.d/crontab_ajuste_dinamico
+RUN chmod 0644 /etc/cron.d/crontab_ajuste_dinamico
+
+CMD service cron start && nginx -g 'daemon off;'

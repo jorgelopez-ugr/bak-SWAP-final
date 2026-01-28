@@ -1,0 +1,1 @@
+Error analizando el contenido del archivo. Verifique que sea la salida de ApacheBench.

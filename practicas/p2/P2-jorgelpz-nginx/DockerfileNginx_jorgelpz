@@ -1,0 +1,10 @@
+FROM nginx:1.24.0
+# le dejo instalado ping por si fuese necesario
+# hacer pruebas de conectividad entre contenedores de la subred
+RUN apt-get update && apt-get install -y iproute2 iputils-ping
+
+EXPOSE 80
+
+CMD ["nginx", "-g", "daemon off;"]
+
+

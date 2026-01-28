@@ -1,0 +1,25 @@
+services:
+  traefik:
+    image: jorgelpz-traefik-image:p2
+    container_name: balanceador-traefik
+    # Este comando permite visualizar el dashboard de traefik.
+    command: --api.isecure=true
+    ports:
+        # En este puerto accedemos al balanceador de carga
+        - "9092:80"
+        # En este puerto accedemos al dashboard de traefik
+        # usando localhost:9001/dashboard
+        - "9001:8080"
+    volumes:
+        - ./traefik.yml:/etc/traefik/traefik.yml
+        - ./dynamic.yml:/etc/traefik/dynamic.yml
+    networks:
+        red_web:
+            #ip que ocupa dentro de la subred red_web
+            ipv4_address: 192.168.10.52
+
+networks:
+    red_web:
+        external: true
+    red_servicios:
+        external: true

@@ -1,0 +1,16 @@
+FROM nginx:latest
+# instalamos iptables en el balanceador nginx para las tareas avanzadas
+RUN apt-get update && apt-get install -y iptables
+# pasamos los archivos relacionados con iptables y el entrypoint
+COPY ./P4-jorgelpz-nginx/P4-jorgelpz-iptables-balanceador/jorgelpz-iptables-balanceador.sh /jorgelpz-iptables-balanceador.sh
+COPY ./P4-jorgelpz-nginx/P4-jorgelpz-iptables-balanceador/entrypoint.sh /entrypoint.sh
+# otorgamos permisos
+RUN chmod +x /entrypoint.sh /jorgelpz-iptables-balanceador.sh
+# configuramos el entrypoint como tal
+ENTRYPOINT [ "/entrypoint.sh" ]
+
+EXPOSE 443
+
+CMD ["nginx", "-g", "daemon off;"]
+
+

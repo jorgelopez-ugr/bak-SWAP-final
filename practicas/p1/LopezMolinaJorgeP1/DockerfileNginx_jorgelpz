@@ -1,0 +1,26 @@
+#Partimos de una imagen de Ubuntu 22.04 sin nginx ni php-fpm.
+FROM ubuntu:22.04
+
+# sirve para que no nos haga preguntas y quede esperando nuestra respuesta.
+ENV DEBIAN_FRONTEND=noninteractive
+
+# Instalar Nginx y PHP-FPM
+RUN apt-get update && \
+    apt-get install -y nginx php-fpm iproute2 iputils-ping
+
+# Eliminamos la configuración por defecto de Nginx,
+# lo hacemos para poner la nueva nuestra.
+RUN rm /etc/nginx/sites-enabled/default
+
+# Copiamos nuestra configuración personalizada para Nginx.
+COPY default.conf /etc/nginx/conf.d/default.conf
+
+EXPOSE 80
+
+# Iniciar PHP-FPM y Nginx al contenedor arrancar
+# además arrancamos los servicios correspondientes a php-fmp y nginx.
+CMD service php8.1-fpm start && nginx -g 'daemon off;'
+
+
+
+

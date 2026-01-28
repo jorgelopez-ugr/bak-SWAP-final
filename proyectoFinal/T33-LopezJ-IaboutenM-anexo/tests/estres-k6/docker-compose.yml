@@ -1,0 +1,15 @@
+services:
+  estres-test:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    container_name: k6-estres-test
+    volumes:
+      - ../../logs/estres:/logs
+    networks:
+      red_entorno:
+        ipv4_address: 192.168.30.107
+
+networks:
+  red_entorno:
+    external: true

@@ -1,0 +1,10 @@
+FROM haproxy:2.8
+
+EXPOSE 80
+#La diferencia es que ahora abrimos tambien este puerto 9000
+#para dar acceso a las estadíticas.
+EXPOSE 9000
+
+CMD ["haproxy", "-f", "/usr/local/etc/haproxy/haproxy.cfg"]
+
+

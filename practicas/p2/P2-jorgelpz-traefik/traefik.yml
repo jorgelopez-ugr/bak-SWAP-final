@@ -1,0 +1,21 @@
+# Definimos los entrypoints
+entryPoints:
+  web:
+    address: ":80"
+  traefik:
+    address: ":8080"
+
+# Le indicamos que hay un nuevo provider a partir de un archivo.
+# Nos va a aparecer cuando entremos al dashboard.
+providers:
+  file:
+    filename: /etc/traefik/dynamic.yml
+
+log:
+  level: INFO
+
+# Le indicamos que el dashboard de traefik debe estar activo.
+api:
+  dashboard: true
+  insecure: true
+

@@ -1,0 +1,27 @@
+http:
+  # Definimos un router que escucha en el puerto 80
+  routers:
+    web-route:
+      #define el entrypoint para el router
+      entryPoints:
+        - web
+      # Toda peticion que cumpla la regla definida
+      # en rule sera redirigida al servicio balanceador_sobre_traefik
+      service: balanceador_sobre_traefik
+      rule: Host(`localhost`)
+  
+  services:
+    # Damos definición al servicio balanceador_sobre_traefik
+    balanceador_sobre_traefik:
+      loadBalancer:
+        servers:
+          - url: "http://192.168.10.2"  # web1
+          - url: "http://192.168.10.3"  # web2
+          - url: "http://192.168.10.4"  # web3
+          - url: "http://192.168.10.5"  # web4
+          - url: "http://192.168.10.6"  # web5
+          - url: "http://192.168.10.7"  # web6
+          - url: "http://192.168.10.8"  # web7
+          - url: "http://192.168.10.9"  # web8
+
+          

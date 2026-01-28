@@ -1,0 +1,13 @@
+services:
+  sobrecarga-test:
+    build: .
+    container_name: sobrecarga-httperf
+    volumes:
+      - ../../logs/sobrecarga:/logs
+    networks:
+      red_entorno:
+        ipv4_address: 192.168.30.109
+
+networks:
+  red_entorno:
+    external: true

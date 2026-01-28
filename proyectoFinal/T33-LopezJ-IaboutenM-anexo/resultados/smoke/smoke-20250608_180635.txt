@@ -1,0 +1,7 @@
+Análisis del test:
+
+  - Peticiones completadas: 10
+  - Peticiones fallidas:    0
+  - Tiempo medio por req.:  1.276 ms
+
+Test aprobado: servicio rápido y sin errores.

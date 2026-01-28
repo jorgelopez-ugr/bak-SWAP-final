@@ -1,0 +1,8 @@
+Análisis del test de estrés con K6:
+
+  - Peticiones totales:         31670
+  - Iteraciones completadas:   0
+  - Porcentaje de fallos:      0.00 %
+  - Latencia media:             1.78 ms
+
+Test exitoso: sin errores y buena latencia.

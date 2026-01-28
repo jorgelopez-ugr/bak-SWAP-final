@@ -1,0 +1,6 @@
+Análisis wrk:
+
+  - Peticiones/segundo: 391.34
+  - Latencia media:     28.56 ms
+
+Servicio estable y rápido.

@@ -1,0 +1,20 @@
+FROM ubuntu:latest
+
+RUN apt-get update && apt-get install -y php apache2 libapache2-mod-php 
+RUN apt-get install -y iproute2 iputils-ping
+#RUN apt-get install -y cron
+#RUN apt-get install -y htop
+
+#COPY apache2.conf /etc/apache2/apache2.conf
+
+#COPY script_clear_logs.sh /usr/local/bin/script_clear_logs.sh
+#COPY crontab_clear_logs /etc/cron.d/crontab-limpieza
+
+#RUN chmod +x /usr/local/bin/script_clear_logs.sh
+#RUN chmod 0644 /etc/cron.d/crontab-limpieza
+
+EXPOSE 80
+
+CMD service cron start && apache2ctl -D FOREGROUND
+
+

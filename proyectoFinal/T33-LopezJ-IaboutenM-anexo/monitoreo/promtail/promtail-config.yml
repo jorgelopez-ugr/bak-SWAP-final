@@ -1,0 +1,50 @@
+server:
+  http_listen_port: 9080
+  grpc_listen_port: 0
+
+positions:
+  filename: /tmp/positions.yaml
+
+clients:
+  - url: http://loki:3100/loki/api/v1/push
+
+scrape_configs:
+  - job_name: smoke-ab
+    static_configs:
+      - targets:
+          - localhost
+        labels:
+          job: smoke-ab
+          __path__: /resultados/smoke/*.txt
+
+  - job_name: capacidad-wrk
+    static_configs:
+      - targets:
+          - localhost
+        labels:
+          job: capacidad-wrk
+          __path__: /resultados/capacidad/wrk/*.txt
+  
+  - job_name: capacidad-siege
+    static_configs:
+      - targets:
+          - localhost
+        labels:
+          job: capacidad-siege
+          __path__: /resultados/capacidad/siege/*.txt
+
+  - job_name: estres-k6
+    static_configs:
+      - targets:
+          - localhost
+        labels:
+          job: estres-k6
+          __path__: /resultados/estres/*.txt
+  
+  - job_name: sobrecarga-httperf
+    static_configs:
+      - targets:
+          - localhost
+        labels:
+          job: sobrecarga-httperf
+          __path__: /resultados/sobrecarga/*.txt

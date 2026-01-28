@@ -1,0 +1,15 @@
+services:
+  smoke-ab:
+    container_name: test-smoke-ab
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ../../logs/smoke:/logs
+    networks:
+      red_entorno:
+        ipv4_address: 192.168.30.100
+
+networks:
+  red_entorno:
+    external: true

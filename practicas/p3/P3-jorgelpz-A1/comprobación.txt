@@ -1,0 +1,126 @@
+CONNECTED(00000003)
+---
+Certificate chain
+ 0 s:C = ES, ST = Granada, L = Granada, O = SWAP, OU = Practica 3, CN = jorgelpz, emailAddress = jorgelpz@correo.ugr.es
+   i:C = ES, ST = Granada, L = Granada, O = SWAP, OU = Practica 3, CN = jorgelpz, emailAddress = jorgelpz@correo.ugr.es
+   a:PKEY: rsaEncryption, 2048 (bit); sigalg: RSA-SHA256
+   v:NotBefore: May  3 11:11:43 2025 GMT; NotAfter: May  3 11:11:43 2026 GMT
+ 1 s:C = ES, ST = Granada, L = Granada, O = SWAP, OU = Practica 3, CN = jorgelpz, emailAddress = jorgelpz@correo.ugr.es
+   i:C = ES, ST = Granada, L = Granada, O = SWAP, OU = Practica 3, CN = jorgelpz, emailAddress = jorgelpz@correo.ugr.es
+   a:PKEY: rsaEncryption, 2048 (bit); sigalg: RSA-SHA256
+   v:NotBefore: May  3 09:48:49 2025 GMT; NotAfter: May  3 09:48:49 2026 GMT
+---
+Server certificate
+-----BEGIN CERTIFICATE-----
+MIIDpzCCAo8CFBndYAqlnUvHWNK3wGNVa/UxPAWNMA0GCSqGSIb3DQEBCwUAMIGP
+MQswCQYDVQQGEwJFUzEQMA4GA1UECAwHR3JhbmFkYTEQMA4GA1UEBwwHR3JhbmFk
+YTENMAsGA1UECgwEU1dBUDETMBEGA1UECwwKUHJhY3RpY2EgMzERMA8GA1UEAwwI
+am9yZ2VscHoxJTAjBgkqhkiG9w0BCQEWFmpvcmdlbHB6QGNvcnJlby51Z3IuZXMw
+HhcNMjUwNTAzMTExMTQzWhcNMjYwNTAzMTExMTQzWjCBjzELMAkGA1UEBhMCRVMx
+EDAOBgNVBAgMB0dyYW5hZGExEDAOBgNVBAcMB0dyYW5hZGExDTALBgNVBAoMBFNX
+QVAxEzARBgNVBAsMClByYWN0aWNhIDMxETAPBgNVBAMMCGpvcmdlbHB6MSUwIwYJ
+KoZIhvcNAQkBFhZqb3JnZWxwekBjb3JyZW8udWdyLmVzMIIBIjANBgkqhkiG9w0B
+AQEFAAOCAQ8AMIIBCgKCAQEA0/zXnBdEmVYAe2f+ZP9ylbWolnde6FO4j2T/ozpc
+4XJ2JpHPUYTWXvOITViTrH9Y7vkjl7Kjl0GdHRD55/6QFlhb+uiAwYJG1RDM1xQD
++K4wgqviZwgByUb5gh0R4WQJEV+cFcRRZUFz0OdAwOZB0fF5DtYRsmlcsUHRFX1z
+5EflpoyVcgAFyH9o4NiRVSwKnjAzkPtCO/5hIfVSicYJkMx2xboByfOjA4awyM/g
+JDhsdeU2HsGeghsEjUld+jZ0jirbJpxRrngAZMflz+dE0tnl8D80SITwPXwoLr3v
+W6Y9artrsRlrzfEZaDZyh9yIbrUbUzHzSh4Ltqktd1P3/wIDAQABMA0GCSqGSIb3
+DQEBCwUAA4IBAQCIThi9xRu1G7yLuvHujVwVERqkHG/YJNRyTLW25WLVjuvm4729
+DV0TvANJKg7HOFIkF1aHU03mgB13nJIzDPO9IzmvIaxN2uxQgjYu7m3HOBYOcmCr
+CE2U+eeE5hu331tR1/eYbK8m9+B/f1EDYGub+wgVnOV1OwPadz4XxMtiZbtznXNr
+yYvUA1QQJDojnTl7PoS4nt+XF1ZffaRJ8IA/Aof8fCNF4+PULKKKTYU/dhognIgS
+HvmDOGTFsD4IC8/UPgIEhJG2z1jA6DaFn+hZeHvo2iCp1UOSTZzI+EsU0mKS9vOz
+pV0bYsFiBG5fjS7FP5TO1SW4A3xMy7w25NEk
+-----END CERTIFICATE-----
+subject=C = ES, ST = Granada, L = Granada, O = SWAP, OU = Practica 3, CN = jorgelpz, emailAddress = jorgelpz@correo.ugr.es
+issuer=C = ES, ST = Granada, L = Granada, O = SWAP, OU = Practica 3, CN = jorgelpz, emailAddress = jorgelpz@correo.ugr.es
+---
+No client certificate CA names sent
+Peer signing digest: SHA256
+Peer signature type: RSA-PSS
+Server Temp Key: X25519, 253 bits
+---
+SSL handshake has read 2439 bytes and written 373 bytes
+Verification error: self-signed certificate
+---
+New, TLSv1.3, Cipher is TLS_AES_256_GCM_SHA384
+Server public key is 2048 bit
+Secure Renegotiation IS NOT supported
+Compression: NONE
+Expansion: NONE
+No ALPN negotiated
+Early data was not sent
+Verify return code: 18 (self-signed certificate)
+---
+---
+Post-Handshake New Session Ticket arrived:
+SSL-Session:
+    Protocol  : TLSv1.3
+    Cipher    : TLS_AES_256_GCM_SHA384
+    Session-ID: C4E16995E116AF157356229E2466B974644911741FC2DF9D7978A99AAE3427AA
+    Session-ID-ctx: 
+    Resumption PSK: FD3BAFA4350965F946787A160B389B1D6378136D61BEED32FFC99102EC6BD6D25C43728758CB50A7A8EC28BE5A987581
+    PSK identity: None
+    PSK identity hint: None
+    SRP username: None
+    TLS session ticket lifetime hint: 300 (seconds)
+    TLS session ticket:
+    0000 - 8d 61 62 e9 0b 60 56 c4-a7 ff d0 c4 95 de cf 3c   .ab..`V........<
+    0010 - 94 7c f1 7f 35 83 2d 1d-83 fb 31 99 74 66 f7 ce   .|..5.-...1.tf..
+    0020 - 0c 79 50 76 c6 62 11 85-c0 81 64 10 0f ea 0e 27   .yPv.b....d....'
+    0030 - e3 b8 4a b4 82 f5 53 40-79 ec e5 be 24 88 dd 05   ..J...S@y...$...
+    0040 - b6 af 2d a9 be ce bf 8e-3e a4 35 67 3c 53 df 5a   ..-.....>.5g<S.Z
+    0050 - e4 e7 b0 33 cd 56 ad f3-cb 1f e5 cd f8 de 51 ca   ...3.V........Q.
+    0060 - 2d 0c 1f aa ed e2 0d 5c-19 29 6c ca a7 e2 28 a7   -......\.)l...(.
+    0070 - 14 6a cc e6 d2 02 b5 f5-79 18 02 e3 e4 d3 92 b7   .j......y.......
+    0080 - 42 1e 60 61 75 1c 71 9c-80 23 13 c2 4f 66 ec c1   B.`au.q..#..Of..
+    0090 - e0 2d 6e 51 82 b0 2e 7a-47 85 e5 18 17 ab 12 be   .-nQ...zG.......
+    00a0 - 18 ee 5b 37 62 dd a2 ae-c0 f1 47 4a 82 c9 b4 94   ..[7b.....GJ....
+    00b0 - d6 75 39 10 d6 11 a2 e0-c0 9b 85 44 5f 76 43 85   .u9........D_vC.
+    00c0 - 0a f5 2e a1 aa cd b9 5d-04 2e 3c d1 5e ba 47 20   .......]..<.^.G 
+    00d0 - f1 39 45 69 36 8d a2 ab-df b3 ac 61 e6 28 09 d5   .9Ei6......a.(..
+
+    Start Time: 1746284497
+    Timeout   : 7200 (sec)
+    Verify return code: 18 (self-signed certificate)
+    Extended master secret: no
+    Max Early Data: 0
+---
+read R BLOCK
+---
+Post-Handshake New Session Ticket arrived:
+SSL-Session:
+    Protocol  : TLSv1.3
+    Cipher    : TLS_AES_256_GCM_SHA384
+    Session-ID: 6A4823DAE05B439E07D97354C0E1C29AF34427091F74D8A0CAA83FEB5799FC97
+    Session-ID-ctx: 
+    Resumption PSK: 11ADB4E8CD247FF62648E1B07F181D0302438176F6F189901A646094F412C8D5E02457BAD12CBFE770BCD5D3EB3D03DC
+    PSK identity: None
+    PSK identity hint: None
+    SRP username: None
+    TLS session ticket lifetime hint: 300 (seconds)
+    TLS session ticket:
+    0000 - 8d 61 62 e9 0b 60 56 c4-a7 ff d0 c4 95 de cf 3c   .ab..`V........<
+    0010 - 8e dd 21 bf 25 98 84 30-0e 6d fd 20 a5 c7 6a d4   ..!.%..0.m. ..j.
+    0020 - 3a 54 5c eb 38 4e de bd-57 99 fe b8 ad 6f 0e 39   :T\.8N..W....o.9
+    0030 - 6c b0 83 93 3a 70 9b db-1f ab 7f 79 a3 90 d1 e2   l...:p.....y....
+    0040 - 68 dd 2a 46 fb 17 dd c8-d9 95 42 e3 29 13 f1 54   h.*F......B.)..T
+    0050 - 19 98 85 18 2c ff 19 8b-46 2f f5 16 9d d7 dd 04   ....,...F/......
+    0060 - 4b b3 d4 4e 73 67 98 6c-0f 5f 4e 18 d1 89 89 ad   K..Nsg.l._N.....
+    0070 - 71 e7 97 b3 dc a5 1e 3e-0d 53 bb e9 4f c1 f1 5c   q......>.S..O..\
+    0080 - a0 f9 0d 87 52 b4 0e 3f-da 95 11 40 44 f4 ba 98   ....R..?...@D...
+    0090 - fb 88 1c 90 4d 67 4b ba-52 b7 11 63 16 7a d3 95   ....MgK.R..c.z..
+    00a0 - b7 2d d1 7f e9 58 ab f6-4c 63 3a 50 cf 44 d2 1f   .-...X..Lc:P.D..
+    00b0 - 99 17 fd cc 9c 32 42 31-8a 38 d4 de 5e 9f 51 d9   .....2B1.8..^.Q.
+    00c0 - 7d 93 63 f2 3f 6f 13 2c-ea 1f 94 35 bd 99 55 51   }.c.?o.,...5..UQ
+    00d0 - 66 41 4f 95 9c b0 03 0c-62 a7 23 2b 22 97 06 22   fAO.....b.#+".."
+
+    Start Time: 1746284497
+    Timeout   : 7200 (sec)
+    Verify return code: 18 (self-signed certificate)
+    Extended master secret: no
+    Max Early Data: 0
+---
+read R BLOCK
+closed

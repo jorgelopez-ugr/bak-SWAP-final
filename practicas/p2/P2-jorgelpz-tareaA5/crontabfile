@@ -1,0 +1,1 @@
+*/2 * * * * root /usr/local/bin/script_escalar_servicios.sh >> /var/log/script_escalar_servicios.log 2>&1

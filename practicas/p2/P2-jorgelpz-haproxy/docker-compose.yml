@@ -1,0 +1,29 @@
+services:
+    balanceador-haproxy:
+        # Crea el balanceador con HAProxy a partir de la imagen jorgelpz-haproxy-image:p2
+        # Gerenada a su vez a partir del DockerfileHAproxy_jorgelpz
+        image: jorgelpz-haproxy-image:p2
+        container_name: balanceador-haproxy
+        ports:
+        # Exponemos el puerto 9091 para colocar ahí el balanceador
+        # El puerto 9000 se usa para acceder al panel de estadísitcas
+        # usando localhost:9000/estadisticas_jorgelpz:
+        # Usuario: jorgelpz Contraseña: SWAP1234 
+        - "9091:80"
+        - "9000:9000"
+        volumes:
+        - ./haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg
+        networks:
+            red_web:
+                #ip que ocupa dentro de la subred red_web
+                ipv4_address: 192.168.10.51
+
+networks:
+    red_web:
+        external: true
+    red_servicios:
+        external: true
+
+
+
+

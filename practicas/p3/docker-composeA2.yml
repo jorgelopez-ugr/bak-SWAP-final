@@ -1,0 +1,148 @@
+services: 
+    web1:
+        image: jorgelpz-apache-image:p3
+        container_name: web1-A2
+        volumes:
+        - ./P3-jorgelpz-apache/web_jorgelpz:/var/www/html
+        - ./P3-jorgelpz-A1:/etc/apache2/ssl
+        - ./P3-jorgelpz-apache/jorgelpz-apache-sslA2.conf:/etc/apache2/sites-available/jorgelpz-apache-ssl.conf
+        command:
+            /bin/sh -c "chmod 600 /etc/apache2/ssl/server.crt && apachectl -D FOREGROUND"
+        networks:
+            red_web:
+                ipv4_address: 192.168.10.2 
+            red_servicios:
+                ipv4_address: 192.168.20.2 
+
+    web2:
+        image: jorgelpz-apache-image:p3
+        container_name: web2-A2
+        volumes:
+        - ./P3-jorgelpz-apache/web_jorgelpz:/var/www/html
+        - ./P3-jorgelpz-A1:/etc/apache2/ssl
+        - ./P3-jorgelpz-apache/jorgelpz-apache-sslA2.conf:/etc/apache2/sites-available/jorgelpz-apache-ssl.conf
+        command:
+            /bin/sh -c "chmod 600 /etc/apache2/ssl/server.crt && apachectl -D FOREGROUND"
+        networks:
+            red_web:
+                ipv4_address: 192.168.10.3 
+            red_servicios:
+                ipv4_address: 192.168.20.3 
+
+    web3:
+        image: jorgelpz-apache-image:p3
+        container_name: web3-A2
+        volumes:
+        - ./P3-jorgelpz-apache/web_jorgelpz:/var/www/html
+        - ./P3-jorgelpz-A1:/etc/apache2/ssl
+        - ./P3-jorgelpz-apache/jorgelpz-apache-sslA2.conf:/etc/apache2/sites-available/jorgelpz-apache-ssl.conf
+        command:
+            /bin/sh -c "chmod 600 /etc/apache2/ssl/server.crt && apachectl -D FOREGROUND"
+        networks:
+            red_web:
+                ipv4_address: 192.168.10.4 
+            red_servicios:
+                ipv4_address: 192.168.20.4 
+
+    web4:
+        image: jorgelpz-apache-image:p3
+        container_name: web4-A2
+        volumes:
+        - ./P3-jorgelpz-apache/web_jorgelpz:/var/www/html
+        - ./P3-jorgelpz-A1:/etc/apache2/ssl
+        - ./P3-jorgelpz-apache/jorgelpz-apache-sslA2.conf:/etc/apache2/sites-available/jorgelpz-apache-ssl.conf
+        command:
+            /bin/sh -c "chmod 600 /etc/apache2/ssl/server.crt && apachectl -D FOREGROUND"
+        networks:
+            red_web:
+                ipv4_address: 192.168.10.5 
+            red_servicios:
+                ipv4_address: 192.168.20.5 
+
+    web5:
+        image: jorgelpz-apache-image:p3
+        container_name: web5-A2
+        volumes:
+        - ./P3-jorgelpz-apache/web_jorgelpz:/var/www/html
+        - ./P3-jorgelpz-A1:/etc/apache2/ssl
+        - ./P3-jorgelpz-apache/jorgelpz-apache-sslA2.conf:/etc/apache2/sites-available/jorgelpz-apache-ssl.conf
+        command:
+            /bin/sh -c "chmod 600 /etc/apache2/ssl/server.crt && apachectl -D FOREGROUND"
+        networks:
+            red_web:
+                ipv4_address: 192.168.10.6 
+            red_servicios:
+                ipv4_address: 192.168.20.6 
+
+    web6:
+        image: jorgelpz-apache-image:p3
+        container_name: web6-A2
+        volumes:
+        - ./P3-jorgelpz-apache/web_jorgelpz:/var/www/html
+        - ./P3-jorgelpz-A1:/etc/apache2/ssl
+        - ./P3-jorgelpz-apache/jorgelpz-apache-sslA2.conf:/etc/apache2/sites-available/jorgelpz-apache-ssl.conf
+        command:
+            /bin/sh -c "chmod 600 /etc/apache2/ssl/server.crt && apachectl -D FOREGROUND"
+        networks:
+            red_web:
+                ipv4_address: 192.168.10.7 
+            red_servicios:
+                ipv4_address: 192.168.20.7 
+
+    web7:
+        image: jorgelpz-apache-image:p3
+        container_name: web7-A2
+        volumes:
+        - ./P3-jorgelpz-apache/web_jorgelpz:/var/www/html
+        - ./P3-jorgelpz-A1:/etc/apache2/ssl
+        - ./P3-jorgelpz-apache/jorgelpz-apache-sslA2.conf:/etc/apache2/sites-available/jorgelpz-apache-ssl.conf
+        command:
+            /bin/sh -c "chmod 600 /etc/apache2/ssl/server.crt && apachectl -D FOREGROUND"
+        networks:
+            red_web:
+                ipv4_address: 192.168.10.8 
+            red_servicios:
+                ipv4_address: 192.168.20.8 
+
+    web8:
+        image: jorgelpz-apache-image:p3
+        container_name: web8-A2
+        volumes:
+        - ./P3-jorgelpz-apache/web_jorgelpz:/var/www/html
+        - ./P3-jorgelpz-A1:/etc/apache2/ssl
+        - ./P3-jorgelpz-apache/jorgelpz-apache-sslA2.conf:/etc/apache2/sites-available/jorgelpz-apache-ssl.conf
+        command:
+            /bin/sh -c "chmod 600 /etc/apache2/ssl/server.crt && apachectl -D FOREGROUND"
+        networks:
+            red_web:
+                ipv4_address: 192.168.10.9 
+            red_servicios:
+                ipv4_address: 192.168.20.9 
+
+    balanceador-nginx-ssl:
+        image: jorgelpz-nginx-image:p3
+        container_name: balanceador-nginx-ssl-A2
+        ports:
+        - "9000:443"
+        volumes:
+        - ./P3-jorgelpz-nginx/jorgelpz-nginx-sslA1.conf:/etc/nginx/nginx.conf
+        - ./P3-jorgelpz-A1:/etc/nginx/ssl
+        networks:
+            red_web:
+                ipv4_address: 192.168.10.50
+        depends_on:
+            - web1
+            - web2
+            - web3
+            - web4
+            - web5
+            - web6
+            - web7
+            - web8
+
+
+networks:
+    red_web:
+        external: true
+    red_servicios:
+        external: true

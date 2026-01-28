@@ -1,0 +1,8 @@
+Análisis de la prueba con Siege:
+
+  - Transacciones totales:       47472
+  - Transacciones fallidas:      0
+  - Tiempo medio de respuesta:   0.030 s
+  - Disponibilidad:              100.00 %
+
+Test aprobado: servicio disponible, rápido y sin errores.

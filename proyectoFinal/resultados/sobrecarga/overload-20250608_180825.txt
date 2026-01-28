@@ -1,0 +1,10 @@
+Análisis de sobrecarga con httperf:
+
+  - Conexiones totales:       10000
+  - Peticiones por segundo:   140.6
+  - Tiempo medio de respuesta:1.2 ms
+  - Errores totales:          0
+  - CPU User:                 14.5%
+  - CPU System:               85.5%
+
+Bajo rendimiento: tasa de peticiones por segundo baja.

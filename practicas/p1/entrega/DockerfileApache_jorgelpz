@@ -1,0 +1,8 @@
+FROM ubuntu/apache2
+
+RUN apt-get update && apt-get install -y php libapache2-mod-php 
+RUN apt-get install -y iproute2 iputils-ping
+
+EXPOSE 80
+
+CMD ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"]

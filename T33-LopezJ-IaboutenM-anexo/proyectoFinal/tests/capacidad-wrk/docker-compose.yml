@@ -1,0 +1,14 @@
+services:
+  capacity-test:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ../../logs/capacidad/wrk:/logs
+    networks:
+      red_entorno:
+        ipv4_address: 192.168.30.102
+
+networks:
+  red_entorno:
+    external: true
